@@ -10,7 +10,7 @@ Guide étape par étape pour installer Snort 3 sur Debian 12, y compris les pré
 **Lien vers la procédure** : [Snort 3 - Installation](https://github.com/YaKnowThisIs/Snort-3/blob/main/Installation.md)
 
 ### ⚙️ Configuration initiale de Snort 3
-Procédure détaillée de configuration initiale de Snort 3. Cela inclut la configuration des interfaces, la personnalisation des règles, et l'ajustement des fichiers de configuration.
+Procédure détaillée de configuration initiale de Snort 3. Cela inclut la configuration de l'interface de capture, la personnalisation des règles et l'ajustement du fichier de configuration.
 
 **Lien vers la procédure** : [Snort 3 - Configuration](https://github.com/YaKnowThisIs/Snort-3/blob/main/Initial%20configuration.md)
 
