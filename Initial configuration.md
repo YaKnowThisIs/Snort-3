@@ -54,6 +54,10 @@ systemctl enable --now snort3-nic.service
 
 
 ## III - CREATION D'UN FICHIER DE REGLES PERSONNALISEES
+Création du répertoire de règles
+```
+mkdir /etc/snort/rules
+```
 Création du fichier de règles
 ```
 nano /etc/snort/rules/local.rules
