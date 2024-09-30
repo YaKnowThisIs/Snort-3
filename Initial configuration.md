@@ -13,7 +13,8 @@ ip link set dev ens18 promisc on
 Configuration de l'offload
 ```
 ip ink show ens18
-apt install ethtool ethtool -k ens18 |grep receive-offload
+apt install ethtool
+ethtool -k ens18 |grep receive-offload
 ethtool -K ens18 gro off lro off
 ethtool -k ens18 | grep receive-offload
 ```
