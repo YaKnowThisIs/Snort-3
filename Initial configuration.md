@@ -46,8 +46,8 @@ WantedBy=default.target
 Activation et redémarrage du service
 ```
 systemctl daemon-reload
-systemctl start snort3-nic.service systemctl
-enable --now snort3-nic.service
+systemctl start snort3-nic.service
+systemctl enable --now snort3-nic.service
 ```
 
 
