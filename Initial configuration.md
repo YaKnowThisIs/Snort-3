@@ -14,7 +14,7 @@ Configuration de l'offload
 ```
 ip link show ens18
 apt install ethtool
-ethtool -k ens18 |grep receive-offload
+ethtool -k ens18 | grep receive-offload
 ethtool -K ens18 gro off lro off
 ethtool -k ens18 | grep receive-offload
 ```
