@@ -12,7 +12,7 @@ ip link set dev ens18 promisc on
 
 Configuration de l'offload
 ```
-ip ink show ens18
+ip link show ens18
 apt install ethtool
 ethtool -k ens18 |grep receive-offload
 ethtool -K ens18 gro off lro off
@@ -31,10 +31,12 @@ nano /etc/systemd/system/snort3-nic.service
 ```
 Contenu du fichier
 ```
-[Unit] Description=Set Snort 3 NIC in promiscuous mode and Disable GRO, LRO on boot
+[Unit]
+Description=Set Snort 3 NIC in promiscuous mode and Disable GRO, LRO on boot
 After=network.target
 
-[Service] Type=oneshot
+[Service]
+Type=oneshot
 ExecStart=/usr/sbin/ip link set dev ens18 promisc on
 ExecStart=/usr/sbin/ethtool -K ens18 gro off lro off
 TimeoutStartSec=0
