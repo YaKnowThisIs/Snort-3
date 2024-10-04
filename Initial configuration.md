@@ -77,7 +77,7 @@ alert icmp any any -> any any (msg:"!!! ICMP Alert !!!";sid:1000001;rev:1;classt
 Création du répertoire
 ```
 mkdir /var/log/snort
-chmod 777 /var/log/snort
+chmod 660 /var/log/snort
 ```
 Modification du fichier de configuration de Snort
 ```
