@@ -55,7 +55,7 @@ systemctl enable --now snort3-nic.service
 ```
 
 
-## III - CONFIGURATION DES REGLES
+## III - MISE EN PLACE D'UN FICHIER DE RÈGLES PERSONNALISÉES 
 Création du répertoire de règles
 ```
 mkdir /etc/snort/rules
@@ -112,7 +112,18 @@ ips =
 ```
 
 
-## III - CONFIGURATION DES LOGS
+## IV - CONFIGURATION DES REGLES OFFICIELLES
+Créer un compte sur le site de snort
+Télécharger les règles dans le répertoire /etc/snort/rules
+```
+cd
+wget https://www.snort.org/downloads/community/snort3-community-rules.tar.gz
+tar -xvf snort3-community-rules.tar.gz
+mv snort3-community-rules/snort3-community.rules /etc/snort/rules
+```
+
+
+## V - CONFIGURATION DES LOGS
 Création du répertoire
 ```
 mkdir /var/log/snort
@@ -144,7 +155,7 @@ alert_full =
 ```
 
 
-## IV - TEST
+## VI - TEST
 Lancer un ping à destination de votre machine
 
 Lancer la capture Snort
