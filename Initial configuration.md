@@ -187,13 +187,14 @@ log_pcap = { limit = 100000 }
 
 
 ## VI - TEST
-Lancer un ping à destination de votre machine
-
-Lancer la capture Snort
+### Tester le fichier de configuration
 ```
-snort -c /etc/snort/snort.lua -R /etc/snort/rules/local.rules -i ens18 -A alert_fast -l /var/log/snort
+snort -c /etc/snort/snort.lua -i ens19 -l /var/log/snort -T
 ```
-
-> Autres options d'alerte :
->- alert_fast
->- alert_full
+### Tester le fonctionnement par défaut
+* Lancer un ping à destination de votre machine
+* Lancer la capture Snort avec les paramètres par défaut
+```
+snort -c /etc/snort/snort.lua -i ens19 -l /var/log/snort
+```
+Les fichiers alert_full et log.pcap.XXXXXXXXXX doivent apparaître dans /var/log/snort
