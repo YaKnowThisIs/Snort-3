@@ -73,6 +73,40 @@ Contenu du fichier
 
 alert icmp any any -> any any (msg:"!!! ICMP Alert !!!";sid:1000001;rev:1;classtype:icmpevent;)
 ```
+Configuration des règles dans le fichier de conf snort.lua
+```
+nano /etc/snort/snort.lua
+```
+>Contenu du fichier à modifier
+```
+---------------------------------------------------------------------------
+-- 5. configure detection
+---------------------------------------------------------------------------
+
+references = default_references
+classifications = default_classifications
+
+ips =
+{
+    -- use this to enable decoder and inspector alerts
+    enable_builtin_rules = true,
+
+    -- use include for rules files; be sure to set your path
+    -- note that rules files can include other rules files
+    -- (see also related path vars at the top of snort_defaults.lua)
+
+    include = "/etc/snort/rules/local.rules",
+
+    variables = default_variables
+}
+
+-- use these to configure additional rule actions
+-- react = { }
+-- reject = { }
+
+-- use this to enable payload injection utility
+-- payload_injector = { }
+```
 
 
 ## III - CONFIGURATION DES LOGS
