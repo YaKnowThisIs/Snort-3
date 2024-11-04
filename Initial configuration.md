@@ -244,3 +244,18 @@ ExecStop=/bin/kill -9 $MAINPID
 [Install]
 WantedBy=multi-user.target
 ```
+Enregistrer et fermer le fichier de service
+
+
+
+### Prise en compte de la configuration et activation du service
+Recharger et activer le service Snort
+```
+systemctl daemon-reload
+systemctl enable --now snort3
+```
+Démarrez le service Snort et vérifier son état 
+```
+service snort3 start
+service snort3 status
+```
