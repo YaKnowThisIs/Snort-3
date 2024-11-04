@@ -98,9 +98,12 @@ ips =
     -- note that rules files can include other rules files
     -- (see also related path vars at the top of snort_defaults.lua)
 
-    include = "/etc/snort/rules/local.rules",
+    variables = default_variables,
 
-    variables = default_variables
+    rules = [[
+      include /etc/snort/rules/local.rules
+    ]]
+
 }
 
 -- use these to configure additional rule actions
@@ -121,7 +124,18 @@ wget https://www.snort.org/downloads/community/snort3-community-rules.tar.gz
 tar -xvf snort3-community-rules.tar.gz
 mv snort3-community-rules/snort3-community.rules /etc/snort/rules
 ```
-
+Configuration des règles dans le fichier de conf snort.lua
+```
+nano /etc/snort/snort.lua
+```
+Dans la section -- 5. configure detection
+* Ajouter la ligne "include = "/etc/snort/rules/snort3-community.rules"," sous la ligne du fichier local.rules comme suit
+```
+    rules = [[
+      include /etc/snort/rules/local.rules
+      include /etc/snort/rules/snort3-community.rules
+    ]]
+```
 
 ## V - CONFIGURATION DES LOGS
 Création du répertoire
