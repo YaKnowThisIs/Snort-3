@@ -155,17 +155,34 @@ Modifier le fichier
 -- 7. configure outputs
 ---------------------------------------------------------------------------
 
-alert_fast =
-{
-    file = true,
-    limit = 100000
-}
+-- event logging
+-- you can enable with defaults from the command line with -A <alert_type>
+-- uncomment below to set non-default configs
 
-alert_full =
-{
-    file = true,
-    limit = 100000
-}
+-- alert_csv = { file = true, limit = 100000 }
+
+-- alert_fast = { file = true, packet = true, limit = 100000 }
+
+alert_full = { file = true, limit = 100000 }
+
+-- alert_json = { file = true, limit = 100000, fields = 'timestamp msg pkt_num proto pkt_gen pkt_len dir src_addr src_port dst_addr dst_port service rule priority class action b64_data' }
+
+--alert_sfsocket = { }
+--alert_syslog = { }
+--unified2 = { }
+
+-- packet logging
+-- you can enable with defaults from the command line with -L <log_type>
+--log_codecs = { }
+--log_hext = { }
+
+log_pcap = { limit = 100000 }
+
+
+-- additional logs
+-- packet_capture = { enable = true }
+-- file_log = { }
+
 ```
 
 
