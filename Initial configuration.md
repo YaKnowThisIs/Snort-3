@@ -189,15 +189,58 @@ log_pcap = { limit = 100000 }
 ## VI - TEST
 ### Tester le fichier de configuration
 ```
-snort -c /etc/snort/snort.lua -i ens19 -l /var/log/snort -T
+snort -c /etc/snort/snort.lua -i ens18 -l /var/log/snort -T
 ```
 ### Tester le fonctionnement par défaut
 * Lancer un ping à destination de votre machine
 * Lancer la capture Snort avec les paramètres par défaut
 ```
-snort -c /etc/snort/snort.lua -i ens19 -l /var/log/snort
+snort -c /etc/snort/snort.lua -i ens18 -l /var/log/snort
 ```
 Les fichiers alert_full et log.pcap.XXXXXXXXXX doivent apparaître dans /var/log/snort
 ```
 ls /var/log/snort
+```
+
+
+## VII - SERVICE SNORT
+Par défaut Snort 3 est utilisable uniquement de manière interactive via la CLI. Pour automatiser sont lancement/arrêt, il est nécessaire de créer un service à ce effet.
+
+### Commande de base à utiliser
+Valider le fonctionnement de la commande de base qui sera lancée en tant que service
+```
+snort -c /etc/snort/snort.lua -i ens19 -s 65535 -k none -l /var/log/snort
+```
+
+### Création de l'utilisateur snort
+Cet utilisateur sera destiné au service Snort (il est recommandé d'exécuter le service Snort avec un compte utilisateur dédié et à privilèges limités pour des raisons de sécurité)
+```
+useradd -r -s /usr/sbin/nologin -M snort
+```
+
+### Droits sur le répertoire /var/log/snort
+Adapter les droits sur le répertoire pour permettre à l'utilisateur d'enregistrer les logs
+```
+chmod -R 5775 /var/log/snort
+chown -R snort:snort /var/log/snort
+```
+
+### Création du service
+Création du fichier de service
+```
+nano /etc/systemd/system/snort3-nic.service
+```
+Contenu du fichier
+```
+[Unit]
+Description=Snort3 IDS Daemon Service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/snort -c /etc/snort/snort.lua -i ens19 -s 65535 -k none -l /var/log/snort -D -m 0x1b -u snort -g snort
+ExecStop=/bin/kill -9 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
 ```
