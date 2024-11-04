@@ -77,7 +77,10 @@ Configuration des règles dans le fichier de conf snort.lua
 ```
 nano /etc/snort/snort.lua
 ```
->Contenu du fichier à modifier
+Dans la section -- 5. configure detection
+* Décommenter la ligne "enable_builtin_rules = true,"
+* Ajouter la ligne "include = "/etc/snort/rules/local.rules","
+
 ```
 ---------------------------------------------------------------------------
 -- 5. configure detection
