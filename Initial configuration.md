@@ -198,3 +198,6 @@ snort -c /etc/snort/snort.lua -i ens19 -l /var/log/snort -T
 snort -c /etc/snort/snort.lua -i ens19 -l /var/log/snort
 ```
 Les fichiers alert_full et log.pcap.XXXXXXXXXX doivent apparaître dans /var/log/snort
+```
+ls /var/log/snort
+```
