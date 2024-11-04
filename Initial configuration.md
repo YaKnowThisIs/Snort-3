@@ -10,7 +10,7 @@ ip link set dev ens18 promisc on
 
 >En mode promiscuous, l'interface réseau traite tous les paquets qu'elle voit passer sur le réseau, indépendamment du fait qu'ils lui soient destinés ou non.
 
-Configuration de l'offload
+Configuration de l'offload (exemple pour ens18)
 ```
 ip link show ens18
 apt install ethtool
@@ -30,7 +30,7 @@ Création du fichier de service
 ```
 nano /etc/systemd/system/snort3-nic.service
 ```
-Contenu du fichier
+Contenu du fichier (exemple pour ens18)
 ```
 [Unit]
 Description=Set Snort 3 NIC in promiscuous mode and Disable GRO, LRO on boot
@@ -40,6 +40,7 @@ After=network.target
 Type=oneshot
 ExecStart=/usr/sbin/ip link set dev ens18 promisc on
 ExecStart=/usr/sbin/ethtool -K ens18 gro off lro off
+ExecStart=/usr/sbin/ethtool -K ens18 gro off gro off
 TimeoutStartSec=0
 RemainAfterExit=yes
 
