@@ -16,6 +16,7 @@ ip link show ens18
 apt install ethtool
 ethtool -k ens18 | grep receive-offload
 ethtool -K ens18 gro off lro off
+ethtool -K ens18 gro off gro off
 ethtool -k ens18 | grep receive-offload
 ```
 >La commande ethtool -k ens18 | grep receive-offload permet de vérifier les paramètres d'optimisation de la réception des paquets sur l'interface ens18 GRO et LRO combinent plusieurs paquets TCP reçus en un seul paquet plus grand pour réduire le nombre de paquets à traiter.
@@ -53,7 +54,7 @@ systemctl enable --now snort3-nic.service
 ```
 
 
-## III - CREATION D'UN FICHIER DE REGLES PERSONNALISEES
+## III - CONFIGURATION DES REGLES
 Création du répertoire de règles
 ```
 mkdir /etc/snort/rules
