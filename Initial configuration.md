@@ -148,8 +148,8 @@ Modification du fichier de configuration de Snort
 nano /etc/snort/snort.lua
 ```
 Modifier le fichier
-
->Se rendre tout en bas du fichier, dans la catégorie "7. configure outputs"
+* Se rendre tout en bas du fichier, dans la catégorie "7. configure outputs"
+> Cette configuration aura pour effet d'activer par défaut le mode "alert_full" et le logging "log_pcap"
 ```
 ---------------------------------------------------------------------------
 -- 7. configure outputs
