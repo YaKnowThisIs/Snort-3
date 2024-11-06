@@ -1,23 +1,30 @@
 # Snort 3 : Installation et Configuration de base
 
-Bienvenue dans ce dépôt GitHub dédié à Snort 3, le célèbre système de détection et de prévention d'intrusions (IDS/IPS). Ce guide  couvre l'installation et la configuration de base de Snort 3 pour vous aider à sécuriser vos réseaux en détectant les menaces.
+Bienvenue dans ce dépôt GitHub dédié à Snort 3, le célèbre système de détection et de prévention d'intrusions (IDS/IPS). Ce guide  couvre l'installation et la configuration de base de Snort 3.
 
 ## 🚀 Contenu du Dépôt
 
 ### 🛠️ Installation de Snort 3
-Guide étape par étape pour installer Snort 3 sur Debian 12, y compris les prérequis et  dépendances comme libdaq.
+Guide étape par étape pour installer Snort 3 sur Debian 12.
 
-  **Lien vers la procédure** : [Snort 3 - Installation](https://github.com/YaKnowThisIs/Snort-3/blob/main/Installation.md)
+📜 Lien vers la procédure : [Snort 3 - Installation](https://github.com/YaKnowThisIs/Snort-3/blob/main/Installation.md)
 
 ### ⚙️ Configuration initiale de Snort 3
-Procédure détaillée de configuration initiale de Snort 3. Cela inclut la configuration de l'interface de capture, la personnalisation des règles, la personnalisation des ouputs et l'ajustement du fichier de configuration.
+Configuration initiale de Snort 3
+- Configuration de l'interface de capture
+- Personnalisation des règles
+- Personnalisation des ouputs
+- Ajustement du fichier de configuration
+- Exécution de Snort 3 en tant que service
 
-  **Lien vers la procédure** : [Snort 3 - Configuration](https://github.com/YaKnowThisIs/Snort-3/blob/main/Initial%20configuration.md)
+📜 Lien vers la procédure : [Snort 3 - Configuration](https://github.com/YaKnowThisIs/Snort-3/blob/main/Initial%20configuration.md)
 
 ## 📖 Prérequis
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
-
 - Un serveur Debian 12 ou une machine virtuelle prête pour l'installation
+  - Idéalement :
+    - une interface dédiée à l'administration
+    - une interface paramétrée en mirroring pour capter l'ensemble du trafic du segment réseau à surveiller
 - Un accès à internet et des dépôts fonctionnels
 - Accès root ou privilèges sudo pour l'installation et la configuration
 - Connaissance de base des commandes Linux et de l'administration réseau
