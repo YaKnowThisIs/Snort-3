@@ -66,9 +66,8 @@ nano /etc/snort/rules/local.rules
 ```
 Contenu du fichier
 >Créer les règles personnalisées souhaitées à la suite (une règle par ligne).
-
-La structure de base des règles est la suivante :
-[action] [protocol] [source IP] [source port] -> [destination IP] [destination port] (options)
+>La structure de base des règles est la suivante :
+> * [action] [protocol] [source IP] [source port] -> [destination IP] [destination port] (options)
 
 ```
 # ----------------
