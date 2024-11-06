@@ -1,4 +1,4 @@
-# Snort 3 - Initial configuration
+# 2 - Snort 3 - Initial configuration
 
 
 ## I - CONFIGURATION DE LA CARTE RESEAU (A CHAUD)
