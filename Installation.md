@@ -1,4 +1,4 @@
-# Snort 3 - Installation
+# 1 - Snort 3 - Installation
 
 > Cette procédure a été testée et validée sur Debian 12.2.0-14
 
