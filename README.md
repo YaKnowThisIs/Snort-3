@@ -1,11 +1,11 @@
-# Snort 3 : Installation, Configuration et Utilisation
+# Snort 3 : Installation et Configuration de base
 
-Bienvenue dans ce dépôt GitHub dédié à Snort 3, le célèbre système de détection et de prévention d'intrusions (IDS/IPS). Ce guide  couvre l'installation, la configuration et l'utilisation de Snort 3 pour vous aider à sécuriser vos réseaux contre les menaces.
+Bienvenue dans ce dépôt GitHub dédié à Snort 3, le célèbre système de détection et de prévention d'intrusions (IDS/IPS). Ce guide  couvre l'installation et la configuration de base de Snort 3 pour vous aider à sécuriser vos réseaux en détectant les menaces.
 
 ## 🚀 Contenu du Dépôt
 
 ### 🛠️ Installation de Snort 3
-Guide étape par étape pour installer Snort 3 sur Debian 12, y compris les prérequis et  dépendances comme libdaq, pcre, et autres.
+Guide étape par étape pour installer Snort 3 sur Debian 12, y compris les prérequis et  dépendances comme libdaq.
 
 **Lien vers la procédure** : [Snort 3 - Installation](https://github.com/YaKnowThisIs/Snort-3/blob/main/Installation.md)
 
@@ -13,9 +13,6 @@ Guide étape par étape pour installer Snort 3 sur Debian 12, y compris les pré
 Procédure détaillée de configuration initiale de Snort 3. Cela inclut la configuration de l'interface de capture, la personnalisation des règles et l'ajustement du fichier de configuration.
 
 **Lien vers la procédure** : [Snort 3 - Configuration](https://github.com/YaKnowThisIs/Snort-3/blob/main/Initial%20configuration.md)
-
-### 📊 Utilisation de Snort 3
->En construction 
 
 ## 📖 Prérequis
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
