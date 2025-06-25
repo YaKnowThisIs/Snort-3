@@ -232,7 +232,7 @@ chown -R snort:snort /var/log/snort
 ### Création du service
 Création du fichier de service
 ```
-nano /etc/systemd/system/snort3-nic.service
+nano /etc/systemd/system/snort3.service
 ```
 Contenu du fichier
 ```
