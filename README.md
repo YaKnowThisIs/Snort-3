@@ -17,7 +17,7 @@ Configuration initiale de Snort 3
 - Ajustement du fichier de configuration
 - Exécution de Snort 3 en tant que service
 
-📜 Lien vers la procédure : [Snort 3 - Configuration](https://github.com/YaKnowThisIs/Snort-3/blob/main/Initial%20configuration.md)
+📜 Lien vers la procédure : [Snort 3 - Configuration](https://github.com/YaKnowThisIs/Snort-3/blob/main/2%20-%20Initial%20configuration.md)
 
 ## 📖 Prérequis
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
