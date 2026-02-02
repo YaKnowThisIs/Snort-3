@@ -7,7 +7,7 @@ Bienvenue dans ce dépôt GitHub dédié à Snort 3, le célèbre système de d�
 ### 1 - 🛠️ Installation de Snort 3
 Guide étape par étape pour installer Snort 3 sur Debian 12.
 
-📜 Lien vers la procédure : [Snort 3 - Installation](https://github.com/YaKnowThisIs/Snort-3/blob/main/Installation.md)
+📜 Lien vers la procédure : [Snort 3 - Installation](https://github.com/YaKnowThisIs/Snort-3/blob/main/1%20-%20Installation.md)
 
 ### 2 - ⚙️ Configuration initiale de Snort 3
 Configuration initiale de Snort 3
