@@ -5,7 +5,7 @@
 ## INSTALLATION DES DÉPENDANCES
 ```
 apt update && apt upgrade
-apt install build-essential libpcap-dev libpcre3-dev libdumbnet-dev bison flex git cmake libdaq2 libdaq-dev  libhwloc-dev luajit libluajit-5.1-dev libssl-dev zlib1g-dev liblzma-dev gawk libcmocka-dev libsqlite3-dev uuid-dev libnetfilter-queue-dev libmnl-dev autotools-dev libunwind-dev libfl-dev && apt install hwloc
+apt install build-essential libpcap-dev libpcre3-dev libdumbnet-dev bison flex git cmake libdaq2 libdaq-dev  libhwloc-dev luajit libluajit-5.1-dev libssl-dev zlib1g-dev liblzma-dev gawk libcmocka-dev libsqlite3-dev uuid-dev libnetfilter-queue-dev libmnl-dev autotools-dev libunwind-dev libfl-dev libpcre2-dev && apt install hwloc
 ```
 
 
